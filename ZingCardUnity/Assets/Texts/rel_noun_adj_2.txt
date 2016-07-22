@@ -1,0 +1,421 @@
+stone : loose wet large 
+bit : little old 
+red : great pretty beautiful little bright small 
+frock : white 
+child : good dead royal little young poor innocent lovely 
+sick : poor 
+bough : green 
+young : beautiful few charming robust fine nice 
+home : comfortable happy 
+sea : heavy great 
+shoe : old golden 
+mist : heavy 
+weight : deadly heavy strange 
+time : second pleasant long short better merry happy blessed 
+night : single whole long 
+day : bright whole working fine single 
+hole : deep great small 
+block : little 
+year : whole full 
+deal : great good 
+group : whole 
+woman : old tiny poor wise 
+open : large 
+way : friendly new short interesting long good little temporary 
+hold : firm 
+party : large 
+company : large great 
+person : dangerous dead 
+atmosphere : new 
+state : higher 
+shower : heavy 
+bad : very 
+dream : pleasant wild heavy 
+stick : little heavy white 
+pair : small hundred new 
+town : large whole great little beautiful 
+noise : strange terrible loud tremendous fine 
+owl : large 
+bell : little new useful 
+sound : different 
+boy : little beautiful old naughty bad 
+jacket : short 
+quiet : old 
+mound : great 
+tongue : strange 
+mind : new 
+difference : little 
+woodland : little 
+bottle : empty little 
+letter : loving small 
+loss : great 
+cupboard : large 
+walk : distant long 
+thing : good great pleasant sad strange fine easy right wonderful bad natural 
+journey : wonderful long 
+number : great large false enormous 
+family : large 
+flower : little small beautiful single 
+stock : capital 
+bed : soft sick good elegant 
+good : very 
+sad : very 
+cry : silent 
+dark : large great very 
+bird : little singing dead large 
+cucumber : large 
+opinion : great high different 
+piece : great fine small little beautiful large fresh 
+tree : green large 
+thread : long dry loose 
+circle : golden 
+mansion : old new 
+word : single 
+servant : single 
+man : old honest wise better good wicked tiny blind young free wonderful great strong 
+drop : little single 
+oak : mighty 
+one : pretty new fresh young little great loved 
+record : lasting 
+carpet : velvet 
+table : great large 
+square : little 
+garden : little small 
+power : increased invisible magic great 
+form : single 
+twilight : red 
+balloon : great 
+week : full whole 
+hour : full 
+crow : great 
+feeling : strange secret 
+life : different merry whole long new future 
+blade : simple 
+rose : single lovely bright red 
+sleep : little 
+dry : few old 
+relative : distant 
+heart : amber noble heavy 
+harp : large 
+ring : gold black 
+suit : new magnificent 
+quality : remarkable 
+train : long 
+basket : large 
+fat : little very good 
+story : pretty old long 
+plant : mere 
+blue : little new bright lovely narrow 
+trunk : old tall 
+iron : old large 
+fine : very 
+pot : old single earthen 
+tale : different 
+space : small 
+demand : great 
+fish : large 
+lamp : silver burning 
+gold : little thick 
+ear : golden 
+toad : great little 
+hand : kind expert strong 
+dish : large 
+coffee : few 
+tub : poor old 
+female : beautiful old human 
+fire : great bright single 
+cross : silver white raised large 
+roll : famous sudden large little 
+bonnet : new 
+canal : broad large 
+building : large wonderful 
+spring : little 
+shock : electric terrible 
+few : very 
+description : short beautiful 
+cabinet : complete 
+shelf : upper 
+blister : large 
+view : pretty 
+light : true very clear blue 
+class : better 
+gray : large little 
+leather : little 
+part : principal small distant great 
+quilt : old 
+place : higher 
+nose : snub 
+girl : little young 
+estate : old 
+snail : little magic 
+innocent : poor 
+green : single large beautiful few little 
+castle : old real new 
+shake : friendly 
+beard : long great 
+image : good 
+ridge : great 
+pile : high 
+distance : little short great long greater 
+black : little long large beautiful few great 
+nut : little 
+carriage : golden 
+winter : whole severe cold 
+message : kind 
+street : poor little real 
+brilliant : little 
+education : better 
+dog : little great 
+chain : continued iron 
+cloud : threatening black 
+vulture : great 
+partner : famous 
+cut : short 
+voice : deep lovely loud low 
+kitten : little 
+opening : small narrow 
+island : little 
+stream : smaller broad smoking little 
+fault : great single 
+bench : little rough 
+house : pretty large small brilliant 
+maiden : poor young beautiful certain 
+trouble : great 
+support : true 
+storm : mighty terrible 
+ship : great fine beautiful large magnificent 
+look : charming 
+price : good 
+cattle : old 
+staff : large 
+highway : great 
+cup : good 
+yellow : large long 
+bunch : great little 
+ball : grand fancy little 
+witch : old 
+purple : large 
+wax : little 
+great : very 
+paper : little 
+apron : old 
+smell : savory 
+match : burning 
+roast : steaming 
+plot : little 
+marble : beautiful 
+flock : large 
+white : long large little clean rough curious 
+river : broad 
+creek : narrow 
+row : long 
+shadow : broad new 
+kind : different similar 
+den : little 
+passage : long stone 
+wood : thick 
+crown : gold golden 
+help : great 
+king : old 
+linen : green 
+book : great little new 
+tune : merry 
+dealer : wholesale 
+love : great 
+dress : gauzy black 
+reflection : little 
+name : famous 
+snake : little 
+lock : long 
+father : bad wise 
+gallery : long open 
+magician : mighty old 
+knife : sharp long 
+church : holy 
+spirit : evil invisible 
+fragrance : wonderful sweet 
+friend : old good 
+heaven : new 
+earth : new 
+room : side inner smaller little 
+ladder : red 
+field : blue open 
+donkey : loaded 
+water : well little 
+kid : little 
+high : very 
+side : wrong best 
+policeman : real 
+world : new 
+summer : pleasant 
+brother : little 
+dead : wide little 
+pink : new 
+actor : new 
+window : little 
+face : painted merry sweet 
+wall : naked outer 
+bag : little large 
+lion : young 
+kiss : silent 
+picture : true large 
+manner : friendly 
+head : little female 
+wind : gentle sharp keen fair 
+maid : old 
+inquiry : great 
+success : great 
+perch : golden 
+court : real 
+packet : large sealed 
+nightingale : artificial real 
+grief : real 
+affair : terrible different stupid 
+feather : little 
+clerk : younger 
+land : strange beautiful 
+spark : tiny 
+leaf : third written great green new 
+calm : peaceful 
+son : little 
+worthy : very 
+emotion : strange 
+fleece : fine 
+goose : large 
+creature : heavy living 
+exchange : good 
+dancer : old 
+pride : little great 
+saving : great 
+writing : green 
+boat : little 
+lake : large whole great 
+amusement : great 
+china : large 
+wire : electric 
+fur : tremendous 
+point : single 
+attack : regular 
+steps : few 
+star : bright beautiful real falling 
+rain : chilling little 
+board : old 
+pea : little 
+violin : famous 
+mountain : great 
+grade : higher 
+comfortable : very 
+corn : little 
+dear : very 
+seat : good 
+band : little full 
+war : real old 
+attention : great 
+tassel : long 
+pleasure : real 
+course : long 
+wife : rich 
+note : little 
+metal : polished 
+drum : old 
+idea : good 
+brass : little 
+tavern : small 
+property : little 
+hot : very 
+office : high 
+princess : real 
+willow : old 
+flute : good 
+coin : gold genuine 
+expert : real 
+mug : small 
+stretch : good 
+fog : thick 
+neck : long 
+human : lovely 
+arch : triumphal 
+grain : small 
+sledge : great 
+cherry : large 
+hat : large 
+line : long thick 
+chance : better 
+closet : small 
+brown : little 
+copper : bright large 
+sunbeam : new 
+morning : good 
+style : new 
+history : little 
+whole : few 
+dinner : excellent 
+mouse : old little 
+glass : thousand 
+sort : strange 
+respect : great 
+village : little 
+baby : little 
+eagle : double 
+bowl : good large 
+salt : dried 
+can : third 
+bush : great 
+box : little 
+battle : hard 
+city : great 
+road : hard 
+mile : whole 
+cable : few 
+rule : general 
+swan : third 
+scent : sweet 
+step : difficult 
+humor : good 
+language : fine 
+smile : childlike 
+hyacinth : white 
+till : home 
+fall : terrible great 
+path : narrow 
+sparrow : old 
+dame : old 
+crash : rolling 
+thistle : great 
+lantern : magic 
+century : future 
+nail : little 
+net : close 
+tin : little 
+door : second 
+request : innocent 
+criminal : poor 
+thought : serious 
+people : whole 
+self : second 
+stool : low little 
+coffin : open 
+height : great 
+flight : strange 
+hall : large 
+bath : large 
+scale : large 
+spot : sunny 
+flag : red 
+duckling : well-bred 
+sister : good 
+master : good 
+meaning : deep 
+potato : great 
+prince : wicked 
+mother : poor 
+heavy : black 
+rock : little 
+change : constant 
+royal : fair 
+manor : old 
+evidence : living 
+alder : old 
+event : great 
+play : popular 
+temper : better 
