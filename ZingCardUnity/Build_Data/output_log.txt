@@ -7,55 +7,75 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.106 seconds
-Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\Clattera\ClatteraUnity\Build_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.107 seconds
+Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.262597 ms
+UnloadTime: 0.813820 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2b74 -> priority: 1 
+  Thread -> id: 185c -> priority: 1 
 NullReferenceException: Object reference not set to an instance of an object
-  at Player+<HumanUpdate>c__Iterator6.MoveNext () [0x00000] in <filename unknown>:0 
+  at Player+<HumanUpdate>c__Iterator7.MoveNext () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.675960 ms
+UnloadTime: 10.788978 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 
-Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 679.
-Total: 1.504690 ms (FindLiveObjects: 0.307378 ms CreateObjectMapping: 0.018735 ms MarkObjects: 1.046842 ms  DeleteObjects: 0.131440 ms)
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 697.
+Total: 0.494732 ms (FindLiveObjects: 0.061475 ms CreateObjectMapping: 0.019906 ms MarkObjects: 0.269614 ms  DeleteObjects: 0.143443 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.328463 ms
+UnloadTime: 5.987729 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 
-Unloading 53 unused Assets to reduce memory usage. Loaded Objects now: 679.
-Total: 0.511711 ms (FindLiveObjects: 0.053864 ms CreateObjectMapping: 0.019028 ms MarkObjects: 0.318795 ms  DeleteObjects: 0.119731 ms)
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 697.
+Total: 0.617976 ms (FindLiveObjects: 0.037178 ms CreateObjectMapping: 0.019906 ms MarkObjects: 0.430036 ms  DeleteObjects: 0.130269 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.732170 ms
+Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 697.
+Total: 0.674768 ms (FindLiveObjects: 0.030445 ms CreateObjectMapping: 0.019028 ms MarkObjects: 0.512004 ms  DeleteObjects: 0.101581 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.241247 ms
+Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 697.
+Total: 0.653691 ms (FindLiveObjects: 0.047424 ms CreateObjectMapping: 0.024004 ms MarkObjects: 0.473362 ms  DeleteObjects: 0.108021 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at Player+<HumanUpdate>c__Iterator6.MoveNext () [0x00000] in <filename unknown>:0 
+  at Player+<HumanUpdate>c__Iterator7.MoveNext () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
