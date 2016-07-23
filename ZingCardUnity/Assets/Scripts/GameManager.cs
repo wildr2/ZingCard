@@ -32,20 +32,21 @@ public class GameManager : MonoBehaviour
 
     // Hitting
     private float miss_delay = 2f; // miss if don't hit the target card this long after hitting an incorrect card
-    private int miss_cards = 4; // miss if hit this number of wrong cards before hitting the target card
+    private int false_hit_cards = 4; // false hit if hit this number of wrong cards before hitting the target card
     private int[] player_hits = new int[2];
     private Player first_hitter = null;
     private float first_hit_time;
 
     // State Times
     private float pre_game_dur = 5f;
-    private float memorize_dur = 20f;
+    private float memorize_dur = 120f;
     private float post_play_dur = 6f;
     
 
     // Events
     public System.Action<GameState> event_new_state;
     public System.Action<Player> event_miss;
+    public System.Action<Player> event_false_hit;
     public System.Action<Player> event_false_start;
     public System.Action<Player> event_correct_hit;
     public System.Action<Player> event_point;
@@ -219,10 +220,10 @@ public class GameManager : MonoBehaviour
             {
                 OnCorrectHit(hitter_id);
             }
-            // Miss
-            else if (player_hits[hitter_id] == miss_cards)
+            // False Hit
+            else if (player_hits[hitter_id] == false_hit_cards)
             {
-                OnMiss(hitter_id);
+                OnFalseHit(hitter_id);
             }
             //else if (!players[hitter_id].HasControl())
             //{
@@ -241,6 +242,18 @@ public class GameManager : MonoBehaviour
         targetcard.SetWinner(players[1 - player_id]);
 
         if (event_false_start != null) event_false_start(players[player_id]);
+        GivePoint(1 - player_id);
+    }
+    private void OnFalseHit(int player_id)
+    {
+        beep.pitch = 1;
+        beep.Play();
+
+        GameCard targetcard = card_manager.GetTargetCard();
+        targetcard.KnockAwayFrom(players[player_id]);
+        targetcard.SetWinner(players[1 - player_id]);
+
+        if (event_false_hit != null) event_false_hit(players[player_id]);
         GivePoint(1 - player_id);
     }
     private void OnMiss(int player_id)

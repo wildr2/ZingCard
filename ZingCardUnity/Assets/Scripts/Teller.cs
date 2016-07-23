@@ -82,6 +82,10 @@ public class Teller : MonoBehaviour
         {
             ShowMessage("MISS " + Tools.ColorRichTxt("+1", gm.GetOpponent(p).player_color));
         };
+        gm.event_false_hit += (Player p) =>
+        {
+            ShowMessage("FALSE HIT " + Tools.ColorRichTxt("+1", gm.GetOpponent(p).player_color));
+        };
         gm.event_correct_hit += (Player p) =>
         {
             ShowMessage("CORRECT HIT " + Tools.ColorRichTxt("+1", p.player_color));

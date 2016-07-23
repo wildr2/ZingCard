@@ -133,7 +133,7 @@ public class CardManager : MonoBehaviour
     {
         foreach (GameCard card in game_cards)
         {
-            if (!card.IsWon()) card.SetOnBoard(2);
+            if (!card.IsWon()) card.SetOnBoard(1);
             if (card == target_card) StackWonCard(card,
                 () => { if (event_board_setup != null) event_board_setup(); });
         }
