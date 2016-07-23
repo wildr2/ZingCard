@@ -60,7 +60,7 @@ public class Teller : MonoBehaviour
         // Events
         gm.event_new_state += (GameState s) =>
         {
-            if (s == GameState.PreFirstPlay) StartCoroutine(IntroRoutine());
+            if (s == GameState.Intro) StartCoroutine(IntroRoutine());
             if (s == GameState.Play) StartCoroutine(TellRoutine());
             if (s == GameState.Reset) SetupNextTell();
             if (s == GameState.PostGame)
@@ -94,14 +94,14 @@ public class Teller : MonoBehaviour
     private IEnumerator IntroRoutine()
     {
         tell_text.text = "FIRST TO " + gm.GetPointsToWin();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         tell_text.text = "GOOD LUCK HAVE FUN!";
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         tell_text.text = "";
 
         if (event_intro_done != null) event_intro_done();
     }
-    private void ShowMessage(string msg, float duration=2, bool flash=true)
+    private void ShowMessage(string msg, float duration=3, bool flash=true)
     {
         StartCoroutine(ShowMessageRoutine(msg, duration, flash));
     }
@@ -129,6 +129,7 @@ public class Teller : MonoBehaviour
 
         // Restore original text
         tell_text.text = original_text;
+        
         showing_message = false;
     }
 
@@ -157,10 +158,12 @@ public class Teller : MonoBehaviour
             target_word_start_i += tell_words[i].Length + 1;
         }
 
+        while (showing_message) yield return null;
+        tell_text.text = "";
+
         // Show '...' for a while
         ShowMessage("...", 2, false);
 
-        tell_text.text = "...";
         for (int i = 0; i < tell_words.Length; ++i)
         {
             // Next word

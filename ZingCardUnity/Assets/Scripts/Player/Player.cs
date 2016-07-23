@@ -25,8 +25,13 @@ public class Player : MonoBehaviour
         gm.event_new_state += (GameState s) =>
         {
             if (s == GameState.CardDraw) EnableControl(false);
+            if (s == GameState.Intro) hand.EnableHandWall();
             if (s == GameState.Play) EnableControl(true);
-            if (s == GameState.Reset) EnableControl(false);
+            if (s == GameState.Reset)
+            {
+                EnableControl(false);
+                hand.EnableHandWall();
+            }
             if (s == GameState.PostGame) EnableControl(false);
         };
         gm.event_point += (Player p) => hand.EndTrail();
@@ -68,7 +73,7 @@ public class Player : MonoBehaviour
             Vector3 tip_target = head.transform.position + head.forward * 1f;
             Vector3 start = head.transform.position + head.right * 0.15f + head.up * -0.3f + head.forward * 0.5f;
             Vector3 target = start + (tip_target - start).normalized * 0.3f;
-            target.z = Mathf.Max(target.z, -0.05f);
+            target.z = head.position.z > 0 ? Mathf.Max(target.z, 0) : Mathf.Min(target.z, 0);
 
             hand.transform.rotation = Quaternion.LookRotation(tip_target - start, Vector3.up);
             hand.SetPosition(Vector3.Lerp(start, target, reach));
@@ -77,8 +82,6 @@ public class Player : MonoBehaviour
             //Vector3 target = head.transform.position + head.transform.rotation * offset2;
             //target.z = Mathf.Max(target.z, 0);
             //hand.SetPosition(Vector3.Lerp(start, target, reach));
-
-            
 
 
             yield return null;

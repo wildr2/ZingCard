@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public enum GameState {
     Unset,
-    PreGame, CardDraw, Memorize, PreFirstPlay,
+    PreGame, CardDraw, Memorize, Intro, PrePlay,
     Play, PostPlay, Reset, PostGame }
 
 
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private int last_scorer_id = -1;
 
     // Hitting
-    private float miss_delay = 1f; // miss if don't hit the target card this long after hitting an incorrect card
+    private float miss_delay = 2f; // miss if don't hit the target card this long after hitting an incorrect card
     private int miss_cards = 4; // miss if hit this number of wrong cards before hitting the target card
     private int[] player_hits = new int[2];
     private Player first_hitter = null;
@@ -39,8 +39,13 @@ public class GameManager : MonoBehaviour
 
     // State Times
     private float pre_game_dur = 5f;
-    private float memorize_dur = 120f;
-    private float post_play_dur = 5f;
+    private float memorize_dur = 20f;
+    private float post_play_dur = 6f;
+
+    // Time wasting
+    private const float time_wasting_delay = 10f;
+    private float[] player_time_waste = new float[2];
+    
 
     // Events
     public System.Action<GameState> event_new_state;
@@ -63,6 +68,8 @@ public class GameManager : MonoBehaviour
         players[1].Initialize(this);
 
         card_manager.event_card_hit += OnCardHit;
+        players[0].hand.event_hand_wall_tripped += OnTripHandWall;
+        players[1].hand.event_hand_wall_tripped += OnTripHandWall;
 
         // scores
         scores = new int[2];
@@ -96,16 +103,19 @@ public class GameManager : MonoBehaviour
     private void SetState(GameState new_state)
     {
         if (_state == new_state) return;
-        //Debug.Log(_state.ToString() + " to " + new_state.ToString());
+
+        GameState last_state = _state;
+        _state = new_state;
+        state_start_time = Time.time;
 
 
         // Exit State
-        switch (_state)
+        switch (last_state)
         {
         }
 
         // Enter State
-        switch (new_state)
+        switch (_state)
         {
             case GameState.PreGame:
                 break;
@@ -116,8 +126,16 @@ public class GameManager : MonoBehaviour
                 int mins = (int)(memorize_dur / 60);
                 court.tell_text.text = mins + (mins == 1 ? " MINUTE" : " MINUTES") + " TO MEMORIZE";
                 break;
-            case GameState.PreFirstPlay:
-                teller.event_intro_done = () => SetState(GameState.Play);
+            case GameState.Intro:
+                teller.event_intro_done = () => SetState(GameState.PrePlay);
+                break;
+            case GameState.PrePlay:
+                if (PlayersReady()) SetState(GameState.Play);
+                else
+                {
+                    card_manager.ShowCardsText(false);
+                    court.tell_text.text = "MOVE HAND BEHIND HAND WALL";
+                }
                 break;
             case GameState.Play:
                 if (IsGamePoint())
@@ -130,13 +148,15 @@ public class GameManager : MonoBehaviour
                 {
                     first_hitter = null;
                     player_hits[0] = 0; player_hits[1] = 0;
-                    SetState(GameState.Play);
+                    SetState(GameState.PrePlay);
                 };
                 break;
         }
 
-        _state = new_state;
-        state_start_time = Time.time;
+        // State change during this function - only let the new instance of SetState continue
+        if (_state != new_state) return; 
+
+        // Events
         if (event_new_state != null) event_new_state(_state);
     }
     private void UpdateState()
@@ -149,13 +169,18 @@ public class GameManager : MonoBehaviour
             case GameState.CardDraw:
                 break;
             case GameState.Memorize:
-                if (StateTimeUp(memorize_dur)) SetState(GameState.PreFirstPlay);
+                if (StateTimeUp(memorize_dur)) SetState(GameState.Intro);
                 break;
-            case GameState.PreFirstPlay:
+            case GameState.Intro:
+                break;
+            case GameState.PrePlay:
+                if (PlayersReady())
+                {
+                    card_manager.ShowCardsText(true);
+                    SetState(GameState.Play);
+                }
                 break;
             case GameState.Play:
-                if (first_hitter != null && Time.time - first_hit_time > miss_delay)
-                    OnMiss(first_hitter.player_id);
                 break;
             case GameState.PostPlay:
                 if (StateTimeUp(post_play_dur))
@@ -171,6 +196,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnTripHandWall(Player player)
+    {
+        if (_state == GameState.Play)
+        {
+            player.hand.EnableHandWall(false);
+            GetOpponent(player).hand.EnableHandWall(false);
+            StartCoroutine(CoroutineUtil.DoAfterDelay(
+                () => OnMissDelayUp(player), miss_delay));
+
+            players[0].hand.StartTrail();
+            players[1].hand.StartTrail();
+        }
+    }
+    private void OnMissDelayUp(Player player)
+    {
+        if (_state == GameState.Play)
+        {
+            OnMiss(player.player_id);
+        }
+    }
     private void OnCardHit(int hitter_id, GameCard card)
     {
         if (first_hitter == null)
@@ -242,6 +287,12 @@ public class GameManager : MonoBehaviour
         if (event_correct_hit != null) event_correct_hit(players[player_id]);
         GivePoint(player_id);
     }
+    private void OnWinGame(int winner_id)
+    {
+        //match_audio.PlayGameOver();
+        //SetState(GameState.PostGame);
+    }
+
     private void GivePoint(int player_id)
     {
         scores[player_id]++;
@@ -255,11 +306,6 @@ public class GameManager : MonoBehaviour
         {
             OnWinGame(player_id);
         }
-    }
-    private void OnWinGame(int winner_id)
-    {
-        //match_audio.PlayGameOver();
-        //SetState(GameState.PostGame);
     }
 
     private void UpdateUIScore()
@@ -283,7 +329,10 @@ public class GameManager : MonoBehaviour
 
         return min + ":" + (sec < 10 ? "0" : "") + sec;
     }
-
+    private bool PlayersReady()
+    {
+        return players[0].hand.IsBehindHandWall() && players[1].hand.IsBehindHandWall();
+    }
 
     // PUBLIC ACCESSORS
 
