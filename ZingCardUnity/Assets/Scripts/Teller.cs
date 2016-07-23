@@ -62,7 +62,11 @@ public class Teller : MonoBehaviour
         {
             if (s == GameState.Intro) StartCoroutine(IntroRoutine());
             if (s == GameState.Play) StartCoroutine(TellRoutine());
-            if (s == GameState.Reset) SetupNextTell();
+            if (s == GameState.Reset)
+            {
+                SetupNextTell();
+                if (!gm.PlayersReady()) ShowMessage("MOVE HANDS BEHIND HAND WALLS", 2, false);
+            }
             if (s == GameState.PostGame)
             {
                 tell_text.text = "";
@@ -98,6 +102,8 @@ public class Teller : MonoBehaviour
         tell_text.text = "GOOD LUCK HAVE FUN!";
         yield return new WaitForSeconds(3);
         tell_text.text = "";
+
+        if (!gm.PlayersReady()) ShowMessage("MOVE HANDS BEHIND HAND WALLS", 2, false);
 
         if (event_intro_done != null) event_intro_done();
     }

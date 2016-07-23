@@ -41,10 +41,6 @@ public class GameManager : MonoBehaviour
     private float pre_game_dur = 5f;
     private float memorize_dur = 20f;
     private float post_play_dur = 6f;
-
-    // Time wasting
-    private const float time_wasting_delay = 10f;
-    private float[] player_time_waste = new float[2];
     
 
     // Events
@@ -127,15 +123,7 @@ public class GameManager : MonoBehaviour
                 court.tell_text.text = mins + (mins == 1 ? " MINUTE" : " MINUTES") + " TO MEMORIZE";
                 break;
             case GameState.Intro:
-                teller.event_intro_done = () => SetState(GameState.PrePlay);
-                break;
-            case GameState.PrePlay:
-                if (PlayersReady()) SetState(GameState.Play);
-                else
-                {
-                    card_manager.ShowCardsText(false);
-                    court.tell_text.text = "MOVE HAND BEHIND HAND WALL";
-                }
+                teller.event_intro_done = () => SetState(GameState.Play);
                 break;
             case GameState.Play:
                 if (IsGamePoint())
@@ -148,7 +136,7 @@ public class GameManager : MonoBehaviour
                 {
                     first_hitter = null;
                     player_hits[0] = 0; player_hits[1] = 0;
-                    SetState(GameState.PrePlay);
+                    SetState(GameState.Play);
                 };
                 break;
         }
@@ -172,13 +160,6 @@ public class GameManager : MonoBehaviour
                 if (StateTimeUp(memorize_dur)) SetState(GameState.Intro);
                 break;
             case GameState.Intro:
-                break;
-            case GameState.PrePlay:
-                if (PlayersReady())
-                {
-                    card_manager.ShowCardsText(true);
-                    SetState(GameState.Play);
-                }
                 break;
             case GameState.Play:
                 break;
@@ -307,7 +288,6 @@ public class GameManager : MonoBehaviour
             OnWinGame(player_id);
         }
     }
-
     private void UpdateUIScore()
     {
         court.score_text.text = scores[0] + "-" + scores[1];
@@ -329,10 +309,7 @@ public class GameManager : MonoBehaviour
 
         return min + ":" + (sec < 10 ? "0" : "") + sec;
     }
-    private bool PlayersReady()
-    {
-        return players[0].hand.IsBehindHandWall() && players[1].hand.IsBehindHandWall();
-    }
+
 
     // PUBLIC ACCESSORS
 
@@ -347,6 +324,12 @@ public class GameManager : MonoBehaviour
     public float GetMemorizeDuration()
     {
         return memorize_dur;
+    }
+
+    public bool PlayersReady()
+    {
+        return players[0].hand.IsBehindHandWall() &&
+               players[1].hand.IsBehindHandWall();
     }
     
     public int GetPoints(int player_id)

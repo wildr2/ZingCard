@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
         {
             if (s == GameState.CardDraw) EnableControl(false);
             if (s == GameState.Intro) hand.EnableHandWall();
-            if (s == GameState.Play) EnableControl(true);
             if (s == GameState.Reset)
             {
                 EnableControl(false);
@@ -47,7 +46,13 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    private void Update()
+    {
+        if (gm.GetGameState() == GameState.Play)
+        {
+            if (!HasControl() && hand.IsBehindHandWall()) EnableControl();
+        }
+    }
     private IEnumerator HumanUpdate()
     {
         float reach = 0;
