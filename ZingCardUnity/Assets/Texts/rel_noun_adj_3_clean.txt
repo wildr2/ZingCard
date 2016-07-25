@@ -1,0 +1,286 @@
+man : old huge fat young fine plain wise better good wicked tiny blind wonderful great strong 
+grey : long beautiful great old straight cold wide tall 
+morning : good fair similar bright 
+ring : tremendous tiny wide gold black 
+beard : blue white long great 
+hood : white red blue 
+green : pale far high deep soft wide long single large beautiful few little 
+sky : dark pale 
+brief : little few 
+light : blue red little great pale white strange clear dim golden grey burning green evil wild true very 
+lamp : big small silver burning 
+passage : short wide difficult long stone 
+big : great good 
+door : large big dark tall great second 
+hobbit : little young plain 
+deal : good great 
+way : good long little short quiet broad secret new 
+bit : good little old 
+spring : warm whole bright little 
+patch : dry grey large small dark 
+branch : big burning dry 
+sword : short broken small red 
+land : wide far grey better dead strange beautiful 
+feeling : comfortable strange odd evil wicked secret 
+young : tall fair beautiful few charming fine nice 
+path : good broad clear worn narrow 
+silver : broad single small 
+valley : dim narrow deep mighty 
+rock : big broken little 
+arch : low dark wide great 
+thing : good odd heavy evil great pleasant sad strange fine right wonderful bad 
+flash : terrible red sudden 
+red : great strong tall burning tiny long brief pretty beautiful little bright small 
+flat : large wide long huge small 
+cave : little great long 
+dark : very deep dark tall small great wide large 
+stream : constant strong white thin tiny smaller broad little 
+island : slimy little 
+shadow : black dim evil grey broad new 
+time : long little short second pleasant better merry happy 
+pine : huge large 
+pack : whole heavy 
+circle : great broken pale golden 
+spot : tiny dark 
+fire : bright warm good small great red blue green single 
+space : flat wide level open little small 
+help : little great 
+black : huge great smaller big dark short long small large vast little beautiful few 
+track : wide narrow 
+hall : wide great large 
+one : little fair single pretty new fresh young great 
+cloth : white black great 
+job : good nasty 
+exchange : poor good 
+growth : mighty deep thick 
+oak : enormous mighty 
+place : difficult deep flat low strong fair worse better 
+feast : great merry little 
+line : long tall whole thick 
+high : very long 
+dog : large old little great 
+water : strong great little 
+cold : nasty bad strange clear pale deadly thin 
+mouth : wide black open 
+town : greater large whole great little beautiful 
+look : good last black sad charming 
+voice : loud cold deep strange third quiet great clear lovely low 
+spur : great long 
+stone : great round cold large white black loose wet 
+crack : dark sharp great 
+wall : flat sheer green 
+perch : high golden 
+idea : great good 
+pot : large old single 
+point : good single 
+wind : gentle wild strong great keen fresh fair ill sharp 
+price : fair good 
+temper : ill better 
+weight : heavy great deadly strange 
+white : pale long fair remote fat cold sudden broad small large little rough curious 
+shape : black vast dark 
+opening : dark narrow small 
+breakfast : good nice 
+face : rocky pale merry sweet 
+view : wide pretty 
+head : good better little 
+shield : round small 
+store : great small 
+cloud : vast dark green great black 
+mess : great nasty 
+peace : new little 
+sun : white cool 
+road : long rough worse wide hard 
+world : wide new 
+part : great large small distant 
+book : small big great little new 
+boat : small little 
+inn : small old good 
+bad : dark very 
+shock : nasty terrible 
+chance : fair good better 
+hot : hundred very 
+leather : worn small little 
+cloak : old grey 
+bag : heavy little large 
+change : curious constant 
+crowd : large mighty whole 
+fish : great large 
+desire : great sudden 
+arm : long slimy 
+home : good comfortable happy 
+fall : little heavy empty terrible great 
+bed : soft great real low good 
+open : wide great broad large 
+tree : tall high white broken living young old green large 
+friend : good old 
+dish : mighty large 
+slope : short sharp 
+gate : narrow single 
+sea : dark green heavy great 
+sleep : high little 
+noise : gentle great strange terrible loud tremendous fine 
+crown : tall silver gold golden 
+blue : long clear deep great little new bright lovely narrow 
+brown : long great deep dead little 
+leaf : large green third great new 
+pile : small high 
+room : low quiet smaller little 
+night : good blind single whole long 
+tower : vast black 
+house : pleasant big little pretty large small 
+river : little grey wide small broad 
+call : clear mere long 
+language : ancient fine 
+mass : dark huge 
+country : small grey fair 
+apron : white old 
+story : funny good pretty old long 
+fear : sudden old great cold 
+name : evil new famous 
+blow : second heavy sad 
+air : cold keen 
+course : straight wise long 
+tale : long brief strange different 
+song : slow fair 
+bend : wide sharp 
+distance : short little great long greater 
+shoulder : rocky great 
+cliff : low great 
+chair : great low large 
+dream : funny pleasant wild heavy 
+waste : wide bare 
+region : wild wide 
+stair : narrow little long 
+force : great dark strong 
+piece : gold small great fine little beautiful large fresh 
+power : great secret invisible magic 
+shirt : small short 
+supply : good bare 
+ridge : low great 
+good : real hundred very 
+event : pleasant great 
+star : single silver small white bright beautiful real 
+floor : level wet 
+roof : vast great 
+square : large small little 
+dust : deep white vast 
+flight : long straight strange 
+smoke : black dark great 
+tongue : slow tiny strange 
+cry : terrible great deadly new 
+hole : round deep great small 
+flame : blue sudden white 
+life : poor different merry whole long new 
+window : high open little 
+lawn : wide long green 
+note : clear little 
+bough : living green 
+mist : grey thin little heavy 
+plot : wicked little 
+veil : dark thick 
+history : great little 
+ship : tall small bright white great fine beautiful large magnificent 
+hill : far green tall 
+lake : remote wide whole large great 
+day : whole evil long fair dim great bright fine single 
+creature : strange heavy living 
+bird : great little dead large 
+chill : sudden great 
+heart : heavy noble 
+pier : low vast 
+drizzle : brief thick 
+gap : tall great 
+child : good dead little young poor lovely 
+choice : right last false 
+breeze : sudden cool 
+company : great fair small large 
+thread : silver long dry loose 
+vision : brief fair 
+people : little new whole 
+knife : black long sharp 
+feet : few thousand 
+wood : distant thick 
+number : fair great large false enormous 
+yellow : cool large long 
+storm : very mighty terrible 
+field : great blue open 
+men : thousand few 
+highway : ancient great 
+heavy : very long large black 
+mind : noble new 
+sense : strange new 
+battle : great black hard 
+stretch : vast good 
+rain : fine sweet little 
+bowl : deep good large 
+picture : little true large 
+seat : stone good 
+building : large wonderful 
+lantern : little magic 
+table : small great large 
+twilight : dim red 
+journey : wonderful long 
+king : great real old 
+spirit : mere evil invisible 
+drop : sheer little single 
+form : black single 
+hand : whole strong 
+mantle : long great 
+fragrance : sweet wonderful 
+word : good sharp single 
+summer : fine pleasant 
+band : large big little full 
+few : good very 
+quiet : nice old 
+kind : noble different similar 
+nut : small little 
+harp : silver large 
+shoe : old golden 
+year : whole full 
+woman : old tiny poor wise 
+stick : little heavy white 
+pair : small hundred new 
+bell : little new 
+boy : little beautiful old bad 
+bottle : empty little 
+walk : distant long 
+flower : little small beautiful single 
+opinion : great high different 
+mansion : old new 
+garden : little small 
+week : full whole 
+rose : single lovely bright red 
+dry : few old 
+suit : new magnificent 
+fat : little very good 
+trunk : old tall 
+iron : old large 
+gold : little thick 
+toad : great little 
+tub : poor old 
+female : beautiful old 
+cross : silver white large 
+roll : famous sudden large little 
+canal : broad large 
+description : short beautiful 
+gray : large little 
+girl : little young 
+snail : little magic 
+castle : old real new 
+winter : whole cold 
+street : poor little real 
+fault : great single 
+bench : little rough 
+maiden : poor young beautiful 
+bunch : great little 
+father : bad wise 
+gallery : long open 
+magician : mighty old 
+dead : wide little 
+affair : terrible different 
+pride : little great 
+war : real old 
+copper : bright large 
+mouse : old little 
+stool : low little 

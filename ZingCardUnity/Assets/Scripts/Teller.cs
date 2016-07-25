@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 
 public class Teller : MonoBehaviour
@@ -32,11 +33,12 @@ public class Teller : MonoBehaviour
     private Text tell_text;
 
     private bool shown_target_word = false;
+    private int target_letters_shown = 0;
     private string tell_phrase;
     private string tell_word; // the word being typed out now
     private int tell_index = 0;
 
-    private const float tell_speed = 7.5f; // chars per second
+    private const float tell_speed = 5f; // chars per second
 
     // Events
     public Action event_intro_done;
@@ -174,30 +176,134 @@ public class Teller : MonoBehaviour
         // Show '...' for a while
         ShowMessage("...", 2, false);
 
-        for (int i = 0; i < tell_words.Length; ++i)
+        //for (int i = 0; i < tell_words.Length; ++i)
+        //{
+        //    // Next word
+        //    tell_word = tell_words[i];
+
+        //    foreach (char c in tell_word + (i < tell_words.Length - 1 ? " " : ""))
+        //    {
+        //        // Pause for messages
+        //        while (showing_message) yield return null;
+        //        if (gm.GetGameState() == GameState.PostPlay)
+        //        {
+        //            stop_index = tell_index;
+        //            break;
+        //        }
+
+        //        // Add character
+        //        tell_text.text += c;
+        //        ++tell_index;
+        //        if (tell_index == target_word_start_i + 1) // tell index points to 2nd letter in target word
+        //            shown_target_word = true;
+
+        //        yield return new WaitForSeconds(1 / tell_speed);
+        //    }
+        //}
+
+
+        //int[] letter_order = Enumerable.Range(0, target_word.Length).ToArray();
+        //Tools.ShuffleArray(letter_order);
+
+        //StringBuilder sb = new StringBuilder(tell_phrase.Length);
+        //for (int i = 0; i < tell_phrase.Length; ++i)
+        //{
+        //    if (i < target_word_start_i || i >= target_word_start_i + target_word.Length)
+        //        sb.Append(' ');
+        //    else
+        //        sb.Append('_');
+        //    //sb.Append(' ');
+        //}
+
+        //target_letters_shown = 0;
+
+        //for (int i = 0; i < tell_phrase.Length; ++i)
+        //{
+        //    // Pause for messages
+        //    while (showing_message) yield return null;
+
+        //    // Write
+        //    if (i >= target_word_start_i && i < target_word_start_i + target_word.Length) continue;
+        //    //if (i < target_word_start_i || i >= target_word_start_i + target_word.Length)
+        //    //{
+        //    sb[i] = tell_phrase[i];
+        //    tell_text.text = sb.ToString().Trim();
+        //    //}
+
+        //    // Early Termination
+        //    if (gm.GetGameState() == GameState.PostPlay) break;
+
+        //    yield return new WaitForSeconds(0.4f / tell_speed);
+        //}
+        //for (int i = 0; i < letter_order.Length; ++i)
+        //{
+        //    // Pause for messages
+        //    while (showing_message) yield return null;
+
+        //    // Reveal letter
+        //    sb[target_word_start_i + letter_order[i]] = target_word[letter_order[i]];
+        //    tell_text.text = sb.ToString().Trim();
+
+        //    ++target_letters_shown;
+        //    shown_target_word = true;
+
+        //    // Early Termination
+        //    if (gm.GetGameState() == GameState.PostPlay) break;
+
+        //    yield return new WaitForSeconds(3f / tell_speed);
+        //}
+        //target_letters_shown = target_word.Length;
+        //shown_target_word = true;
+
+
+
+        int[] letter_order = Enumerable.Range(0, tell_phrase.Length).ToArray();
+        int k = 0;
+        foreach (string word in tell_words)
         {
-            // Next word
-            tell_word = tell_words[i];
-
-            foreach (char c in tell_word + (i < tell_words.Length-1 ? " " : ""))
-            {
-                // Pause for messages
-                while (showing_message) yield return null;
-                if (gm.GetGameState() == GameState.PostPlay)
-                {
-                    stop_index = tell_index;
-                    break;
-                }
-
-                // Add character
-                tell_text.text += c;
-                ++tell_index;
-                if (tell_index == target_word_start_i+1) // tell index points to 2nd letter in target word
-                    shown_target_word = true;
-
-                yield return new WaitForSeconds(1 / tell_speed);
-            }
+            int[] order = Enumerable.Range(k, word.Length).ToArray();
+            Tools.ShuffleArray(order);
+            for (int i = k; i < k + word.Length; ++i) letter_order[i] = order[i - k];
+            k += word.Length + 1;
         }
+        //Tools.ShuffleArray(letter_order);
+
+        StringBuilder sb = new StringBuilder(tell_phrase.Length);
+        for (int i = 0; i < tell_phrase.Length; ++i)
+        {
+            //if (tell_phrase[i] == ' ')
+            //    sb.Append(' ');
+            //else
+            //    sb.Append('_');
+            sb.Append(' ');
+        }
+
+        target_letters_shown = 0;
+
+        for (int i = 0; i < letter_order.Length; ++i)
+        {
+            // Pause for messages
+            while (showing_message) yield return null;
+
+            // Reveal letter
+            sb[letter_order[i]] = tell_phrase[letter_order[i]];
+            tell_text.text = sb.ToString().Trim();
+
+            if (i >= target_word_start_i && i < target_word_start_i + target_word.Length)
+                ++target_letters_shown;
+
+            shown_target_word = true;
+
+            // Early Termination
+            if (gm.GetGameState() == GameState.PostPlay) break;
+
+
+            if (tell_phrase[letter_order[i]] == ' ') continue;
+            yield return new WaitForSeconds(1 / tell_speed);
+        }
+        target_letters_shown = target_word.Length;
+        shown_target_word = true;
+
 
         // Wait for post play and no messages
         while (gm.GetGameState() == GameState.Play || showing_message) yield return null;
@@ -500,6 +606,11 @@ public class Teller : MonoBehaviour
     {
         return shown_target_word;
     }
+    public int GetTargetLettersShown()
+    {
+        return target_letters_shown;
+    }
+
     public string GetTargetWord()
     {
         return target_word;
@@ -528,6 +639,7 @@ public class Teller : MonoBehaviour
     {
         return target_words.Length - target_word_order_i;
     }
+
 
 }
 

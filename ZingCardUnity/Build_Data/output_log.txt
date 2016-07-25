@@ -15,67 +15,58 @@ Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnit
 Loading C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.107 seconds
+- Completed reload, in  0.037 seconds
 Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Robert\_KEEP\Personal\Game Dev\ZingCard\ZingCardUnity\Build_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 The system cannot find the file specified.
+
+ 
+(Filename:  Line: 54)
+
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.813820 ms
+UnloadTime: 0.760541 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 185c -> priority: 1 
-NullReferenceException: Object reference not set to an instance of an object
-  at Player+<HumanUpdate>c__Iterator7.MoveNext () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
+  Thread -> id: 25bc -> priority: 1 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.788978 ms
+UnloadTime: 10.227491 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 
-Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 697.
-Total: 0.494732 ms (FindLiveObjects: 0.061475 ms CreateObjectMapping: 0.019906 ms MarkObjects: 0.269614 ms  DeleteObjects: 0.143443 ms)
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 720.
+Total: 0.776056 ms (FindLiveObjects: 0.163349 ms CreateObjectMapping: 0.038349 ms MarkObjects: 0.415692 ms  DeleteObjects: 0.158080 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.987729 ms
+UnloadTime: 7.913374 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 
-Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 697.
-Total: 0.617976 ms (FindLiveObjects: 0.037178 ms CreateObjectMapping: 0.019906 ms MarkObjects: 0.430036 ms  DeleteObjects: 0.130269 ms)
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 720.
+Total: 0.685306 ms (FindLiveObjects: 0.036592 ms CreateObjectMapping: 0.037763 ms MarkObjects: 0.491219 ms  DeleteObjects: 0.119145 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.732170 ms
+UnloadTime: 6.543932 ms
 Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 697.
-Total: 0.674768 ms (FindLiveObjects: 0.030445 ms CreateObjectMapping: 0.019028 ms MarkObjects: 0.512004 ms  DeleteObjects: 0.101581 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.241247 ms
-Unity v5.3.5f1, Oculus Utilities v1.5.0, OVRPlugin v1.3.2, SDK v1.6.0.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 697.
-Total: 0.653691 ms (FindLiveObjects: 0.047424 ms CreateObjectMapping: 0.024004 ms MarkObjects: 0.473362 ms  DeleteObjects: 0.108021 ms)
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 720.
+Total: 0.573186 ms (FindLiveObjects: 0.036592 ms CreateObjectMapping: 0.025175 ms MarkObjects: 0.382319 ms  DeleteObjects: 0.128806 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at Player+<HumanUpdate>c__Iterator7.MoveNext () [0x00000] in <filename unknown>:0 
+  at Player+<HumanUpdate>c__Iterator8.MoveNext () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 

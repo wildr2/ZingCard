@@ -30,7 +30,8 @@ public class WordTools : MonoBehaviour
         }
         else
         {
-            GenPhrasesAndTargetWords(32, true);
+            CleanNounAdjRels("Assets/Texts/rel_noun_adj_3_clean_mod.txt", "Assets/Texts/rel_noun_adj_3_clean_sm.txt", "Assets/Texts/rel_noun_adj_3_clean_inverse_sm.txt");
+            //GenPhrasesAndTargetWords(32, true);
         }
     }
 
@@ -39,7 +40,7 @@ public class WordTools : MonoBehaviour
         string[] phrases = new string[n];
         string[] target_words = new string[n];
 
-        Dictionary<string, HashSet<string>> nouns_r_adjs = ReadWordRelations("Assets/Texts/rel_noun_adj_3.txt");
+        Dictionary<string, HashSet<string>> nouns_r_adjs = ReadWordRelations("Assets/Texts/rel_noun_adj_3_clean.txt");
         HashSet<string> used_words = new HashSet<string>();
 
         for (int i = 0; i < n; ++i)
@@ -118,7 +119,11 @@ public class WordTools : MonoBehaviour
         do
         {
             i = (i + 1) % nouns_r_adjs.Count;
-            if (i == start_i) Debug.LogError("Not enough words");
+            if (i == start_i)
+            {
+                Debug.LogError("Not enough words");
+                return null;
+            }
             noun = nouns_r_adjs.ElementAt(i).Key;
 
         } while (forbidden_words != null && forbidden_words.Contains(noun));
@@ -302,6 +307,128 @@ public class WordTools : MonoBehaviour
 
         yield return null;
         Tools.Log("Done extracting relations - " + new_heads + " new heads, " + new_leaves + " new leaves");
+    }
+    public void CleanNounAdjRels(string in_file, string out_file, string out_file_inverse="")
+    {
+        Dictionary<string, HashSet<string>> noun_adjs = ReadWordRelations(in_file);
+
+        // Create inverse relations dictionary
+        Dictionary<string, HashSet<string>> adj_nouns = new Dictionary<string, HashSet<string>>();
+        foreach (KeyValuePair<string, HashSet<string>> entry in noun_adjs)
+        {
+            foreach (string adj in entry.Value)
+            {
+                HashSet<string> nouns;
+                if (adj_nouns.TryGetValue(adj, out nouns))
+                {
+                    nouns.Add(entry.Key);
+                }
+                else
+                {
+                    nouns = new HashSet<string>();
+                    nouns.Add(entry.Key);
+                    adj_nouns.Add(adj, nouns);
+                }
+            }
+        }
+
+        // Clean
+        int total_noun_removals = 0;
+        int total_adj_removals = 0;
+        int min_adjs_per_noun = 2;
+        int min_nouns_per_adj = 2;
+
+        int pass = 1;
+        while (true)
+        {
+            int adj_removals = 0;
+            int noun_removals = 0;
+
+            // Remove nouns described by too few adjectives
+            List<string> rmv = new List<string>();
+            foreach (KeyValuePair<string, HashSet<string>> entry in noun_adjs)
+            {
+                if (entry.Value.Count < min_adjs_per_noun)
+                {
+                    // Mark for removal
+                    rmv.Add(entry.Key);
+
+                    // Remove from adj dict
+                    Tools.Log("Remove noun: " + entry.Key);
+                    foreach (string adj in entry.Value)
+                    {
+                        adj_nouns[adj].Remove(entry.Key);
+                    }
+
+                    ++noun_removals;
+                }
+            }
+            foreach (string noun in rmv)
+            {
+                // Remove from nouns dict
+                noun_adjs.Remove(noun);
+            }
+
+            // Remove adjectives describing too few nouns
+            rmv = new List<string>();
+            foreach (KeyValuePair<string, HashSet<string>> entry in adj_nouns)
+            {
+                if (entry.Value.Count < min_nouns_per_adj)
+                {
+                    // Mark for removal
+                    rmv.Add(entry.Key);
+
+                    // Remove from adj dict
+                    Tools.Log("Remove adj: " + entry.Key);
+                    foreach (string noun in entry.Value)
+                    {
+                        noun_adjs[noun].Remove(entry.Key);
+                    }
+
+                    ++adj_removals;
+                }
+            }
+            foreach (string adj in rmv)
+            {
+                // Remove from nouns dict
+                adj_nouns.Remove(adj);
+            }
+
+            // Stats
+            Tools.Log("Pass " + pass + ": removed " + noun_removals + " nouns and " + adj_removals + " adjectives", Color.red);
+            ++pass;
+            total_noun_removals += noun_removals;
+            total_adj_removals += adj_removals;
+
+            // Termination
+            if (noun_removals + adj_removals == 0) break;
+        }
+
+
+        // Write relations
+        StreamWriter writer = new StreamWriter(out_file, false);
+        foreach (KeyValuePair<string, HashSet<string>> entry in noun_adjs)
+        {
+            string s = entry.Key + " : ";
+            foreach (string leaf in entry.Value) s += leaf + ' ';
+            writer.WriteLine(s);
+        }
+        writer.Close();
+
+        if (out_file_inverse != "")
+        {
+            writer = new StreamWriter(out_file_inverse, false);
+            foreach (KeyValuePair<string, HashSet<string>> entry in adj_nouns)
+            {
+                string s = entry.Key + " : ";
+                foreach (string leaf in entry.Value) s += leaf + ' ';
+                writer.WriteLine(s);
+            }
+            writer.Close();
+        }
+
+        Tools.Log("Done cleaning relations, removed "
+            + total_noun_removals + " nouns and " + total_adj_removals + " adjectives", Color.red);
     }
     public void TestGenPhrases(string nouns_r_adjs_file, string adjs_r_advs_file)
     {

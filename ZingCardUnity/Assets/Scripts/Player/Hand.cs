@@ -148,7 +148,7 @@ public class Hand : MonoBehaviour
         }
 
         // Outro
-        while (gm.GetGameState() != GameState.Reset) yield return null;
+        while (gm.GetGameState() != GameState.Reset && gm.GetGameState() != GameState.PostGame) yield return null;
         float t = Time.time - start_time;
         trail.time = t;
         //for (float i = 0; i < 1; i += Time.deltaTime / 2f)

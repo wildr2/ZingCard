@@ -100,11 +100,17 @@ public class Player : MonoBehaviour
         {
             // Wait
             while (gm.GetGameState() != GameState.Play) yield return null;
-            while (!gm.teller.HasShownTargetWord())
+
+            string tw = gm.teller.GetTargetWord();
+            int needed_letters = Random.Range(3, tw.Length);
+
+            while (true) //(!gm.teller.HasShownTargetWord())
             {
+                int letters = gm.teller.GetTargetLettersShown();
+                if (letters > needed_letters) break;
                 yield return null;
             }
-            yield return new WaitForSeconds(Random.Range(0.25f, 2.5f));
+            yield return new WaitForSeconds(Random.Range(0.25f, 1.5f));
 
 
             // Swing at card

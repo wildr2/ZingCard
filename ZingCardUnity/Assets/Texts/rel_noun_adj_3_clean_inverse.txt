@@ -1,0 +1,140 @@
+very : light dark high bad hot good storm heavy few fat 
+old : man grey bit dog pot inn cloak tree friend apron story fear king quiet shoe woman boy mansion dry trunk iron tub female castle magician war mouse 
+huge : man flat pine black mass 
+fat : man white 
+young : man hobbit one tree child girl maiden 
+fine : man young thing noise language piece ship day rain summer 
+plain : man hobbit 
+wise : man course woman father 
+better : man land time place temper head chance 
+good : man morning big deal way bit path thing fire job exchange look idea point price breakfast head inn chance home bed friend night story supply child stretch bowl seat word few fat 
+wicked : man feeling plot 
+tiny : man ring red stream spot tongue woman 
+blind : man night 
+wonderful : man thing building journey fragrance 
+great : man grey beard light big door deal arch thing red cave dark circle fire help black hall one cloth feast dog water town voice spur stone crack idea wind weight store cloud mess part book fish desire fall bed open sea noise blue brown leaf fear distance shoulder cliff chair force piece power ridge event roof smoke cry hole history ship lake day bird chill gap company number field highway battle table king mantle opinion toad fault bunch pride 
+strong : man red stream place water wind force hand 
+long : grey beard green passage way red flat cave time black line high spur white road arm blue brown night call story course tale distance stair flight life lawn day thread knife yellow heavy journey mantle walk gallery 
+beautiful : grey green land young red black town piece star ship boy flower female description maiden 
+straight : grey course flight 
+cold : grey voice stone white fear air winter 
+wide : grey ring green passage land arch flat dark space track hall mouth view road world open river bend waste region lawn lake dead 
+tall : grey door young red dark line tree crown ship hill gap trunk 
+silver : lamp crown star thread harp cross 
+fair : morning young one place wind price white chance country song day company vision number 
+similar : morning kind 
+bright : morning spring red fire blue star ship day rose copper 
+tremendous : ring noise 
+gold : ring crown piece 
+black : ring shadow cloth mouth look stone shape cloud tower smoke knife heavy battle form 
+white : beard hood light stream cloth stone sun tree apron star dust flame ship stick cross 
+blue : beard hood light fire flame field 
+red : hood light sword flash fire twilight rose 
+pale : green sky light circle cold white face 
+far : green land hill 
+high : green perch tree sleep pile window opinion 
+deep : green valley dark growth place voice blue brown dust hole bowl 
+soft : green bed 
+single : green silver fire one pot point gate night star day drop form word flower rose fault 
+large : green door patch flat dark pine black hall dog town stone pot white part bag crowd fish open tree dish leaf house chair piece square ship lake bird company number yellow heavy bowl picture building table band harp iron cross roll canal gray copper 
+few : green brief young black feet men dry 
+little : green brief light hobbit way bit spring rock red cave stream island time space help black one feast dog water town white head peace book boat leather bag fall sleep blue brown room house river distance stair piece square window note mist plot history bird child people rain picture lantern drop band nut stick bell boy bottle flower garden fat gold toad roll gray girl snail street bench bunch dead pride mouse stool 
+dark : sky door patch arch dark spot black crack shape opening cloud bad sea mass force smoke veil 
+strange : light land feeling thing cold voice weight noise tale flight tongue creature sense 
+clear : light path cold voice blue call note 
+dim : light valley shadow day twilight 
+golden : light circle perch crown shoe 
+grey : light patch land shadow cloak river country mist 
+burning : light lamp branch red 
+green : light fire wall cloud tree sea leaf lawn bough hill 
+evil : light feeling thing shadow name day spirit 
+wild : light wind dream region 
+true : light picture 
+big : lamp door branch rock black book house band 
+small : lamp patch sword silver red flat dark fire space black white opening shield store part book boat inn leather pile house river country piece shirt star square hole ship company table nut pair flower garden 
+short : passage way sword time black slope distance shirt description 
+difficult : passage place 
+stone : passage seat 
+second : door time blow 
+quiet : way voice room 
+broad : way path silver stream shadow white open river canal 
+secret : way feeling power 
+new : way shadow one peace world book blue leaf name cry life people mind sense pair bell mansion suit castle 
+warm : spring fire 
+whole : spring pack line town crowd night life lake day people hand year week winter 
+dry : patch branch thread 
+nasty : job cold mess shock 
+broken : sword rock circle tree 
+dead : land brown bird child 
+comfortable : feeling home 
+odd : feeling thing 
+charming : young look 
+nice : young breakfast quiet 
+worn : path leather 
+narrow : path valley track opening gate blue stair 
+pleasant : thing time house dream event summer 
+mighty : valley growth oak crowd dish storm magician 
+low : arch place voice bed room cliff chair ridge pier stool 
+heavy : thing pack weight bag fall sea blow dream mist creature heart stick 
+sad : thing look blow 
+right : thing choice 
+bad : thing cold boy father 
+terrible : flash shock fall noise cry storm affair 
+sudden : flash white desire fear flame chill breeze roll 
+brief : red tale drizzle vision 
+pretty : red one view house story 
+constant : stream change 
+thin : stream cold mist 
+smaller : stream black room 
+slimy : island arm 
+last : look choice 
+merry : time feast face life 
+happy : time home 
+flat : space place wall 
+level : space floor 
+open : space mouth window field gallery 
+vast : black shape cloud tower roof dust pier stretch 
+fresh : one wind piece 
+different : tale life kind opinion affair 
+poor : exchange life child woman tub street maiden 
+thick : growth line veil drizzle wood gold 
+enormous : oak number 
+worse : place road 
+deadly : cold weight cry 
+greater : town distance 
+loud : voice noise 
+third : voice leaf 
+lovely : voice blue child rose 
+round : stone shield hole 
+loose : stone thread 
+wet : stone floor 
+sharp : crack wind slope bend knife word 
+sheer : wall drop 
+gentle : wind noise 
+keen : wind air 
+ill : wind temper 
+remote : white lake 
+rough : white road bench 
+curious : white change 
+rocky : face shoulder 
+sweet : face rain fragrance 
+cool : sun breeze yellow 
+hard : road battle 
+distant : part wood walk 
+hundred : hot good pair 
+empty : fall bottle 
+real : bed good star king castle street war 
+living : tree bough creature 
+funny : story dream 
+mere : call spirit 
+ancient : language highway 
+famous : name roll 
+slow : song tongue 
+bare : waste supply 
+noble : heart mind kind 
+invisible : power spirit 
+magic : power lantern snail 
+magnificent : ship suit 
+false : choice number 
+thousand : feet men 
+full : band year week 

@@ -1,0 +1,104 @@
+space : flat wide open little small 
+help : little great 
+hall : wide great large 
+one : little fair single new fresh young great 
+cloth : white black great 
+job : good nasty 
+exchange : poor good 
+growth : mighty deep thick 
+oak : enormous mighty 
+place : deep flat low strong fair 
+feast : great merry little 
+line : long tall whole thick 
+high : very long 
+dog : large old little great 
+water : strong great little 
+cold : nasty bad strange pale 
+mouth : wide black open 
+face : pale merry sweet 
+force : great strong 
+piece : small great fine little beautiful large fresh 
+power : great invisible magic 
+shirt : small short 
+history : great little 
+ship : tall small bright white great fine beautiful large 
+lake : wide whole large great 
+day : whole evil long fair great bright fine single 
+creature : strange heavy 
+bird : great little dead large 
+chill : sudden great 
+heart : heavy noble 
+pier : low vast 
+drizzle : brief thick 
+gap : tall great 
+child : good dead little young poor 
+breeze : sudden cool 
+company : great fair small large 
+thread : silver long 
+vision : brief fair 
+people : little new whole 
+knife : black long sharp 
+feet : few thousand 
+number : fair great large enormous 
+yellow : cool large long 
+storm : very mighty terrible 
+field : great open 
+men : thousand few 
+heavy : very long large black 
+mind : noble new 
+sense : strange new 
+battle : great black 
+stretch : vast good 
+rain : fine sweet little 
+bowl : deep good large 
+picture : little large 
+building : large wonderful 
+lantern : little magic 
+table : small great large 
+journey : wonderful long 
+king : great real old 
+spirit : evil invisible 
+drop : little single 
+form : black single 
+hand : whole strong 
+mantle : long great 
+fragrance : sweet wonderful 
+word : good sharp single 
+band : large little full 
+few : good very 
+kind : noble different 
+nut : small little 
+harp : silver large 
+year : whole full 
+woman : old poor wise 
+stick : little heavy white 
+pair : small new 
+bell : little new 
+fat : little very good 
+trunk : old tall 
+iron : old large 
+gold : little thick 
+toad : great little 
+tub : poor old 
+female : beautiful old 
+cross : silver white large 
+roll : sudden large little 
+description : short beautiful 
+gray : large little 
+girl : little young 
+snail : little magic 
+castle : old real new 
+street : poor little real 
+fault : great single 
+maiden : poor young beautiful 
+bunch : great little 
+father : bad wise 
+gallery : long open 
+magician : mighty old 
+dead : wide little 
+affair : terrible different 
+pride : little great 
+war : real old 
+copper : bright large 
+mouse : old little 
+stool : low little 
